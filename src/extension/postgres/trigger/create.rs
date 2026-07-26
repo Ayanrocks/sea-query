@@ -203,7 +203,8 @@ impl TriggerCreateStatement {
         I: IntoIterator<Item = S>,
         S: Into<String>,
     {
-        self.function_args.extend(args.into_iter().map(|s| s.into()));
+        self.function_args
+            .extend(args.into_iter().map(|s| s.into()));
         self
     }
 }
